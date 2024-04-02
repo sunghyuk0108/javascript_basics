@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meme maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <canvas></canvas>
+    <input id="line-width" type="range" min="1" max="10" value="5" step="0.1">
+    <div id="color-menu">
+        <input type="color" id="color">
+        <div class="color-option" style="background-color: #40407a;" data-color="#40407a"></div>
+        <div class="color-option" style="background-color: #706fd3;" data-color="#706fd3"></div>
+        <div class="color-option" style="background-color: #f7f1e3;" data-color="#f7f1e3"></div>
+        <div class="color-option" style="background-color: #34ace0;" data-color="#34ace0"></div>
+        <div class="color-option" style="background-color: #33d9b2;" data-color="#33d9b2"></div>
+        <div class="color-option" style="background-color: #2c2c54;" data-color="#2c2c54"></div>
+        <div class="color-option" style="background-color: #474787;" data-color="#474787"></div>
+        <div class="color-option" style="background-color: #aaa69d;" data-color="#aaa69d"></div>
+        <div class="color-option" style="background-color: #227093;" data-color="#227093"></div>
+        <div class="color-option" style="background-color: #218c74;" data-color="#218c74"></div>
+        <div class="color-option" style="background-color: #ff5252;" data-color="#ff5252"></div>
+        <div class="color-option" style="background-color: #ff793f;" data-color="#ff793f"></div>
+        <div class="color-option" style="background-color: #d1ccc0;" data-color="#d1ccc0"></div>
+        <div class="color-option" style="background-color: #ffb142;" data-color="#ffb142"></div>
+        <div class="color-option" style="background-color: #ffda79;" data-color="#ffda79"></div>
+        <div class="color-option" style="background-color: #b33939;" data-color="#b33939"></div>
+        <div class="color-option" style="background-color: #cd6133;" data-color="#cd6133"></div>
+        <div class="color-option" style="background-color: #84817a;" data-color="#84817a"></div>
+        <div class="color-option" style="background-color: #cc8e35;" data-color="#cc8e35"></div>
+    </div>
+    <div id="fuc-menu1">
+        <button id="mode-btn">Fill</button>
+        <button id="destroy-btn">Destroy</button>
+        <button id="eraser-btn">Eraser</button>
+        <input type="text" placeholder="입력 후 더블 클릭" id="text">
+    </div>
+    <div id="fuc-menu2">
+        <input type="file" accept="image/*" id="file"> 
+        <!-- ex) input에 multiple 속성을 추가하면 여러개의 파일을 업로드할 수 있음  -->
+        <button id="save">🖼 Save image</button>
+    </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

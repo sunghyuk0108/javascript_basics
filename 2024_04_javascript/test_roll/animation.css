@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.test_animation {
+  width: 100%;
+
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.first_slot {
+  width: 100px;
+  height: 100px;
+  background-color: cadetblue;
+  border-radius: 100px;
+}
+
+.second_slot > .roll {
+  width: 100px;
+  height: 100px;
+  background-color: fuchsia;
+  border-radius: 100px;
+}
+
+.move {
+  animation: move 1 linear 3s;
+}
+
+@keyframes move {
+  from {
+    margin-left: 0;
+  }
+  50% {
+    margin-left: 500px;
+  }
+  to {
+    margin-left: 0;
+  }
+}

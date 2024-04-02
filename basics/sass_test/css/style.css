@@ -1,0 +1,121 @@
+* {
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+header {
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 50px;
+  border-bottom: 1px solid blue;
+}
+header #logo {
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+header nav {
+  margin-top: 2rem;
+  font-size: 1rem;
+}
+header nav #menu {
+  display: flex;
+}
+header nav #menu > li {
+  margin-left: 1rem;
+  position: relative;
+}
+header #sub_menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 1.2rem;
+  z-index: 990;
+}
+header #sub_menu > li {
+  padding: 0.5rem 0;
+}
+
+.slide_box {
+  width: 100%;
+  height: 50vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.slide_box .slide_container {
+  height: 100%;
+  position: absolute;
+  display: flex;
+  left: 0;
+  top: 0;
+}
+.slide_box .slide_container li {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.slide_box .slide_container li img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+}
+.slide_box button {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  font-size: 14px;
+  text-align: center;
+  border-radius: 100%;
+  margin: auto;
+  line-height: 20px;
+  background-color: white;
+  color: rgb(236, 10, 146);
+  border: 1px solid rgb(236, 10, 146);
+  font-weight: bold;
+}
+.slide_box .left_bt {
+  left: 1rem;
+}
+.slide_box .right_bt {
+  right: 1rem;
+}
+
+.warning, .error, .success, .message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+
+.transition03 {
+  transition: 0.3s;
+}
+
+header #sub_menu.display_on {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */

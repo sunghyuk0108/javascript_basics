@@ -1,0 +1,73 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    list-style: none;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+canvas {
+    width: 800px;
+    height: 800px;
+    border: 3px solid #000;
+}
+
+main {
+    width: 800px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+}
+
+#line-width {
+    width: 30%;
+}
+
+#color-menu {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+#color {
+    width: 50px;
+    height: 30px;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+#fuc-menu1 {
+    display: flex;
+}
+
+#fuc-menu2 {
+    display: flex;
+}
+
+#fuc-menu1 button, #fuc-menu2 button {
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #0167df;
+    border: none;
+    color: #fff;
+    margin-right: 15px;
+}
+
+#fuc-menu1 input, #fuc-menu2 input {
+    font-size: 18px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 15px;
+}

@@ -1,0 +1,45 @@
+body {
+}
+
+.box {
+  background-color: purple;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+  animation: move 2s infinite;
+  transition: 3s;
+}
+
+@keyframes move {
+  0% {
+    top: -300px;
+  }
+
+  /* Finish changes by here */
+  20% {
+    right: -300px;
+  }
+
+  40% {
+    right: 300px;
+  }
+
+  60% {
+    right: -300px;
+  }
+
+  80% {
+    right: 300px;
+  }
+
+  /* Between 20% and 100%, nothing changes */
+  100% {
+    top: 0;
+  }
+}

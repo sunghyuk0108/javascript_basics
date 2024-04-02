@@ -1,0 +1,22 @@
+//변수 설정방법
+$brand-color : blue;
+$boder-color : #000;
+$font-stack : helvetica, sans-serif;
+
+@mixin theme($theme: blue, $bold){
+    background-color: white;
+    color: $theme;
+    border: 1px solid $theme;
+    font-weight: $bold;
+}
+
+* {
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,body {
+    height: 100%;
+}
