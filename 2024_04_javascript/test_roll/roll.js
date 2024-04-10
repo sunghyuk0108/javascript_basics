@@ -30,12 +30,10 @@ const animationEndDetector = (element) => {
   });
 };
 
-const startFirstRoll = async () => {
+const startCompanySlotAnimation = async () => {
   if (companySlot.isMove) {
     throw new Error("이미 게임이 시작되었습니다.");
   } else {
-    // 시작버튼을 눌렀을 때 put api가 호출되야함 (user의 eventInfo의 변경)
-    // ...
     console.log("slot머신 게임이 시작되었습니다.");
     companySlot.isMove = true;
     firstSlot.classList.add("move");
@@ -44,7 +42,7 @@ const startFirstRoll = async () => {
   }
 };
 
-function startSecondRoll() {
+function startNumberSlotAnimation() {
   for (let i = 0; i < secondSlotList.length; i++) {
     console.log(i);
     const timer = setTimeout(() => {
@@ -58,21 +56,23 @@ function startSecondRoll() {
 }
 
 // 체이닝 방식을 더 선호함
-const allStart = async () => {
-  try {
-    const firstRoll = await startFirstRoll();
-    const secondRoll = await startSecondRoll();
-
-    console.log(secondRoll, "마지막 롤 종료 확인");
-    timeOutList.forEach((timer) => {
-      clearTimeout(timer);
+const gameStart = () => {
+  startCompanySlotAnimation()
+    .then((firstRollResult) => {
+      console.log(firstRollResult); // 첫번째 롤링 완료
+      return startNumberSlotAnimation();
+    })
+    .then((secondRollResult) => {
+      console.log(secondRollResult, "마지막 롤 종료 확인"); // 두번째 롤링 완료
+      timeOutList.forEach((timer) => {
+        clearTimeout(timer);
+      });
+      console.log("후처리"); // 후처리 작업
+    })
+    .catch((error) => {
+      console.log(error); // 에러 발생 시 처리
     });
-
-    console.log("후처리");
-  } catch (error) {
-    console.log(error);
-  }
 };
 
-startBt.addEventListener("click", allStart);
-// allStart();
+startBt.addEventListener("click", gameStart);
+// gameStart();
