@@ -9,6 +9,7 @@ let companySlot = {
 };
 
 console.log(companySlot);
+console.log('test2');
 let numberSlot = [
   { isMove: false, delay: 500 },
   { isMove: false, delay: 1000 },
