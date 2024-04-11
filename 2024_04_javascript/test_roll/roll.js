@@ -8,6 +8,7 @@ let companySlot = {
   isMove: false,
 };
 
+console.log(companySlot);
 let numberSlot = [
   { isMove: false, delay: 500 },
   { isMove: false, delay: 1000 },
